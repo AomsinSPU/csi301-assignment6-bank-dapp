@@ -1,0 +1,121 @@
+:root {
+  color-scheme: light;
+  --background: #f6f5f1;
+  --ink: #282441;
+  --muted: #777582;
+  --purple: #6b55d9;
+  --line: #e7e4eb;
+  font-family: "Leelawadee UI", "Noto Sans Thai", Tahoma, sans-serif;
+  color: var(--ink);
+  background: var(--background);
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input { font: inherit; }
+button, a, input { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; }
+button { cursor: pointer; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid #9b86fb; outline-offset: 4px; }
+[hidden] { display: none !important; }
+.shell { max-width: 1120px; margin: auto; padding: 0 40px; }
+.topbar { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; border-bottom: 1px solid var(--line); gap: 18px; }
+.brand { display: flex; align-items: center; gap: 11px; text-decoration: none; font-size: 30px; font-weight: 750; line-height: 1; letter-spacing: -1px; }
+.brand-dot { color: var(--purple); }
+.brand small { display: block; margin-top: 7px; font-size: 8px; letter-spacing: 1.4px; font-weight: 600; }
+.brand-icon { width: 44px; height: 44px; display: grid; place-items: center; background: var(--purple); color: white; border-radius: 13px; }
+.brand-icon svg { width: 28px; height: 28px; }
+.network-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; border: 1px solid #d9e6dc; border-radius: 40px; background: #f1f7f0; color: #3a7256; padding: 9px 13px; white-space: nowrap; }
+.network-badge > span { width: 6px; height: 6px; background: #5a9972; border-radius: 50%; }
+.intro { padding: 46px 0 30px; }
+.eyebrow { color: var(--purple); font-size: 10px; font-weight: 700; letter-spacing: 1.7px; margin: 0 0 14px; }
+h1 { font-size: clamp(30px, 4.2vw, 44px); line-height: 1.45; font-weight: 700; letter-spacing: -1.4px; margin: 0; }
+h1 > span { color: var(--purple); margin-left: .25em; }
+.intro-description { font-size: 14px; color: var(--muted); line-height: 1.9; margin: 12px 0 0; }
+.intro-description br { display: none; }
+.wallet-bar { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 18px 22px; margin-bottom: 22px; background: #fff; border: 1px solid var(--line); border-radius: 16px; }
+.wallet-info { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.wallet-icon { background: #f1eefc; color: var(--purple); border-radius: 12px; width: 38px; height: 38px; display: grid; place-items: center; font-size: 22px; flex-shrink: 0; }
+.wallet-info > div { min-width: 0; }
+#wallet-label { font-size: 13px; font-weight: 650; margin: 0 0 5px; }
+#wallet-address { font-size: 11px; margin: 0; color: var(--muted); overflow-wrap: anywhere; line-height: 1.5; }
+.wallet-actions { display: flex; flex-wrap: wrap; gap: 8px; flex-shrink: 0; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 15px; padding: 12px 18px; border: 1px solid transparent; border-radius: 9px; font-size: 12px; font-weight: 650; min-height: 44px; transition: background .15s, transform .15s; }
+.button:not(:disabled):active { transform: translateY(1px); }
+.button-primary { background: var(--purple); color: #fff; }
+.button-primary:hover:not(:disabled) { background: #5943c4; }
+.button-outline { border-color: #d7d0ee; background: transparent; color: var(--purple); }
+.button-outline:hover:not(:disabled) { background: #f4f1ff; }
+.dashboard { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 22px; }
+.balance-card { position: relative; overflow: hidden; padding: 29px; border-radius: 20px; color: #fff; background: #282441; min-width: 0; }
+.balance-card::after { content: ""; pointer-events: none; position: absolute; width: 260px; height: 260px; border: 1px solid #ffffff0b; border-radius: 50%; right: -130px; bottom: 30px; box-shadow: 0 0 0 32px #ffffff03, 0 0 0 64px #ffffff03; }
+.balance-heading { display: flex; align-items: center; justify-content: space-between; }
+h2 { font-size: 16px; font-weight: 650; margin: 0; }
+.balance-heading h2 { color: #e3dff2; font-size: 14px; }
+.balance-emblem { color: #a799e9; font-size: 29px; line-height: 1; }
+.balance-value { font-size: 50px; letter-spacing: -1.5px; line-height: 1.25; margin: 29px 0 8px; overflow-wrap: anywhere; }
+.currency { font-size: 18px; color: #bab1d5; letter-spacing: 0; }
+.balance-detail { color: #bcb4ce; font-size: 12px; line-height: 1.9; min-height: 23px; margin: 0 0 23px; overflow-wrap: anywhere; }
+.button-glass { background: #ffffff0d; color: #eee9ff; border-color: #ffffff24; }
+.button-glass:hover:not(:disabled) { background: #ffffff20; }
+.balance-footer { display: flex; justify-content: space-between; gap: 12px; font-size: 10px; color: #a79dbc; margin-top: 34px; border-top: 1px solid #ffffff1c; padding-top: 18px; }
+.balance-footer span:last-child { letter-spacing: 1.4px; }
+.transaction-card { padding: 26px; border: 1px solid var(--line); border-radius: 20px; background: #fff; }
+.section-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 25px; }
+.step-label { color: #9b96ab; font-size: 9px; letter-spacing: 1.5px; }
+form label { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 650; margin-bottom: 12px; }
+.operation-icon { width: 25px; height: 25px; display: inline-grid; place-items: center; border-radius: 7px; font-size: 17px; }
+.deposit-icon { background: #edf5f0; color: #3e8560; }
+.withdraw-icon { background: #f2eefc; color: var(--purple); }
+.operation-english { color: #9a94a8; font-size: 11px; font-weight: 400; margin-left: auto; }
+.amount-field { display: flex; align-items: center; border: 1px solid var(--line); background: #faf9fc; border-radius: 9px; margin-bottom: 12px; padding: 0 15px; }
+.amount-field:focus-within { border-color: var(--purple); }
+.amount-field input { min-width: 0; width: 100%; color: var(--ink); padding: 14px 10px 14px 0; font-size: 20px; background: transparent; border: 0; outline: 0; }
+.amount-field input::placeholder { color: #b7b2c3; }
+.amount-field input:disabled { cursor: not-allowed; }
+.amount-field > span { font-size: 12px; color: #8b839c; }
+.button-full { width: 100%; justify-content: space-between; }
+.form-divider { height: 1px; background: var(--line); margin: 23px 0; }
+.field-help { font-size: 10px; color: #908a9c; line-height: 1.8; text-align: center; margin: 17px 0 0; }
+.feedback { display: flex; align-items: flex-start; gap: 10px; border: 1px solid var(--line); border-radius: 12px; padding: 14px 17px; margin-top: 22px; color: #706883; background: #f0eef5; font-size: 12px; line-height: 1.8; }
+.feedback p { margin: 0; overflow-wrap: anywhere; }
+.feedback-dot { flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; margin-top: 8px; background: #8d7bb6; }
+.feedback[data-tone="error"] { color: #a53645; background: #fff0f1; border-color: #efd0d6; }
+.feedback[data-tone="error"] .feedback-dot { background: #c4485a; }
+.feedback[data-tone="success"] { color: #387151; background: #edf6ef; border-color: #d7e8dc; }
+.feedback[data-tone="success"] .feedback-dot { background: #4b926a; }
+.transaction-result { font-size: 12px; text-align: right; line-height: 1.8; }
+.transaction-result a { color: var(--purple); text-underline-offset: 4px; }
+.student-card { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 27px 0; margin-top: 13px; }
+.student-card .eyebrow { font-size: 9px; color: #96909f; margin-bottom: 8px; }
+.student-name { font-size: 14px; margin: 0; font-weight: 600; }
+.student-id { text-align: right; }
+.student-id span { display: block; font-size: 10px; color: var(--muted); margin-bottom: 6px; }
+.student-id strong { font-size: 17px; font-weight: 600; letter-spacing: 1.5px; }
+footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px; border-top: 1px solid var(--line); padding: 22px 0 30px; }
+footer > div { min-width: 0; }
+.footer-label { display: block; font-size: 8px; color: #a19aa9; letter-spacing: 1.2px; margin-bottom: 7px; }
+footer a { display: block; font-size: 10px; text-decoration: none; color: #878090; overflow-wrap: anywhere; }
+footer a:hover { color: var(--purple); text-decoration: underline; }
+footer p { font-size: 10px; color: #96909f; margin: 0; }
+@media (max-width: 760px) {
+  .shell { padding: 0 22px; }
+  .topbar { padding: 23px 0; }
+  .intro { padding-top: 32px; }
+  h1 > span { display: block; margin-left: 0; }
+  .wallet-bar { align-items: stretch; flex-direction: column; }
+  .wallet-actions .button { flex: 1; }
+  .dashboard { grid-template-columns: 1fr; gap: 18px; }
+  .balance-card { padding: 26px; }
+  .balance-value { font-size: 46px; }
+  .transaction-card { padding: 23px; }
+  .intro-description br { display: inline; }
+}
+@media (max-width: 380px) {
+  .shell { padding: 0 16px; }
+  .brand small { font-size: 7px; letter-spacing: .6px; }
+  .network-badge { font-size: 10px; padding: 8px; }
+  .student-card { align-items: flex-start; flex-direction: column; }
+  .student-id { text-align: left; }
+}
